@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+:root {
+    /* cores */
+    --cor-principal: #0C3370; /* azul escuro */
+    --cor-secundaria: #07727D; /*caribbean current */
+    --cor-secundaria-fraca: #48afbb;
+    --cor-destaque: #FF8552; /* coral */
+
+    /* fontes */
+    --fonte-texto: "Calibri";
+    --fonte-especial: "Cambria";
+
+    --teste: blue;
+    --largura-botao-painel: 70px;
+}
+
+/* as configurações padrões (modelo) para os elementos 
+ gerais foram colocadas na página modelo.html */
+
+* { /* todos elementos */
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0px;
+}
+
+
+
+/* parte superior do site ------------------------------ */
+header{
+    background-color: var(--cor-principal);
+
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+
+    display: table; 
+    width: 100%;
+}
+
+span.nome-titulo{ /* caixa com o nome principal */
+    /* background-color: white; */
+    
+    display: table-cell;
+    width: 600px; /* colocar valor automatico depois*/
+    
+    padding-top: 20px; /* o problema é que eu queria o tamanho do span mutavel*/
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    margin-right: 0px;
+
+}
+h1.nome-titulo{ /* Nome */
+    margin: 0;
+    /* background-color:darkorange; */
+    font-size: 4em;
+
+    color: white;
+
+    font-family: var(--fonte-especial);
+}
+h1.nome-titulo>a { /* link do nome */
+    text-decoration: none;
+    color: white;
+}
+h1.nome-titulo>a:visited{ /* quando link do nome for visitado */
+    color: white;
+}
+
+span.navegar-cabecalho{ /* caixa com a parte de navegação */
+    text-align: right;
+    /* background-color: aquamarine; */
+
+    display: table-cell;
+    width: auto;
+    
+    padding-right: 30px;
+    
+}
+span.navegar-cabecalho>nav{ /* elemento de navegação com os botões */
+    /* background-color: brown; */
+
+    margin: 0px;
+    float:right;
+    
+}
+.botao-secao{
+    font-size: 2em;
+    /* background-color: blueviolet; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.botao-secao>a { /* link do botão de seção */
+    color: white;
+    text-decoration: none;
+}
+.botao-secao>a:visited { /* quando link do botão de seção for visitado*/
+    color: white;
+}
+
+
+
+/* parte central do site -------------------------------- */
+main{
+    background-color: white;
+    margin: 30px 10px 30px 10px;
+    padding: 30px;
+}
+h2#titulo-pagina{
+    text-align: center;
+    font-size: 3em;
+    font-family: var(--fonte-especial);
+
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+p#parag-especial{
+    background-color: antiquewhite;
+    text-align: center;
+    margin: 0px;
+
+    font-family: var(--fonte-especial);
+}
+main>section{
+    background-color: blueviolet;
+    padding: 10px;
+}
+main>section>p{
+    margin-bottom: 0px; /* para retirar espaço no final da section */
+}
+
+
+
+/* parte inferior (rodapé) do site  --------------------- */
+footer{
+    background-color: var(--cor-principal);
+    padding: 20px;
+
+    text-align: right;
+}
+p#parag-contatos {
+    color: white;
+
+    font-size: 1.5em;
+
+    margin-bottom: 5px;
+}
+a.contato-rodape {
+    color: white;
+    text-decoration: none;
+}
+a.contato-rodape:visited {
+    text-decoration: dashed;
+}
+/*
+footer>nav {
+     background-color: darkgoldenrod; 
+}
+*/
+
+
+/* -------------------- elementos exclusivos da página inicial --------------------- */
+/* configurações padrão */
+
+div#painel {
+    background-color:burlywood;
+    height: 320px; 
+
+    text-align: center; /* centralizar tela do painel*/
+    margin: auto; /*centralizar painel*/
+
+    position: relative; /* permitir posicionamento dos elementos internos */
+
+    /* padding: 10px; */
+
+    padding: 0px var(--largura-botao-painel);
+    
+}
+div#tela-painel {
+    background-color: var(--cor-principal);
+
+    margin: auto; /* manter no centro horizontalmente*/
+
+    height: 100%; /* estender até o fim do painel */
+
+}
+/*
+div#tela-painel>img {
+
+}
+*/
+h4#titulo-projeto-painel {
+    position: absolute;
+    bottom: 35%;
+    left: 10%;
+
+    font-family: var(--fonte-especial);
+
+    font-size: 3em;
+}
+div#botao-esquerda { /* ao lado esquerdo do painel */
+    background-color: aqua;
+    
+    float: left; /* flutuar para esquerda */
+
+    /* faz elemento ficar no padding do elemento pai */
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    width: var(--largura-botao-painel);
+
+}
+div#botao-direita { /* ao lado direito do painel */
+    background-color: aqua;
+
+    float: right; /* flutuar para direita */
+
+    /* faz elemento ficar no padding do elemento pai */
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: var(--largura-botao-painel);
+    
+}
+
+
+div#agregador-blocos {
+    background-color: cornflowerblue;
+    text-align: center;
+
+    padding: 10px 0px;
+}
+span.bloco-projeto {
+    background-color: brown;
+
+    text-align: center;
+
+    /* formato de quadrado */
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    margin: 0px 10px;
+}
+
+
+
+
+/* -------------------- elementos exclusivos da página sobre --------------------- */
+/* configurações padrão */
+
+/* caixa maior para acomodar informações */
+div#parte-apresentacao{ 
+    background-color: aqua;
+
+    padding: 10px;
+    display: table;
+}
+
+
+/* caixa para ficar em volta da foto */
+span#caixa-foto {
+    background-color: coral;
+
+    display: table-cell;
+    
+
+    /* width: 400px;
+    height: 400px; */
+
+    /* padding: 100px; */
+}
+img#imagem-sobre {
+
+    /* enquanto não põe foto real */
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+
+}
+
+/* caixa para acompanhar o texto */
+span#caixa-info {
+    background-color: blanchedalmond;
+
+    padding: 10px;
+
+    /* float: right; */
+    /*display: inline-block;*/
+
+    display: table-cell;
+    width: 100%;
+
+    vertical-align: top;
+}
+p#parag-especial-introducao {
+    background-color: red;
+    
+    
+    /*
+    display: inline-block;
+    margin: auto;
+    */
+}
+p#parag-introducao {
+    background-color:cadetblue;
+}
+
+/* ----------------------------------------- */
+
+
+/* caixa maior para o curriculo */ 
+div#parte-curriculo {
+    background-color:deeppink;
+
+    width: 100%; /* ocupar largura disponivel */
+    /* height: 30px; */
+
+    /* text-align: center; */
+
+    padding: 10px;
+}
+
+/* caixa para agregar blocos do curriculo */
+div#agregador-conteudos-curriculo{
+    background-color:darkgreen;
+    text-align: center;
+}
+span.conteudo-curriculo{
+    background-color: blue;
+
+    
+    display: inline-block;
+    /* width: 40px; */
+    /*height: 40px;*/
+
+    margin: 0px 10px 10px 10px
+}
+
+/* caixa para envolver o botão de baixar curriculo */
+div#caixa-extra-curriculo {
+    background-color:cornflowerblue;
+
+    text-align: center; /* para centralizar o botão */
+    padding: 10px 0px;
+}
+span#botao-baixar-curriculo {
+    background-color: cornsilk;
+
+    display: inline-block; /* para ficar dentro da caixa */
+
+    padding: 10px;
+
+}
