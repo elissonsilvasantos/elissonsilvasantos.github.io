@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisson Silva Santos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        
+        main>section {
+            background-color: var(--cor-secundaria);
+        }
+
+        /* parte da introdução */
+        div#parte-apresentacao {
+            background-color: inherit;
+            padding: 0px 0px 15px 0px;
+        }
+        span#caixa-foto {
+            background-color: white;
+
+
+            /* padding-bottom: -5px; */
+        }
+        span#caixa-info {
+            background-color: white;
+        }
+        p#parag-especial-introducao {
+            background-color: var(--cor-secundaria-fraca);
+
+            font-family: var(--fonte-especial);
+            font-size: 1.6em;
+            text-align: center;
+
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+
+        }
+        p#parag-introducao {
+            background-color: inherit;
+
+            font-family: var(--fonte-texto);
+            font-size: 1.3em;
+        }
+
+        /* parte do currículo */
+        div#parte-curriculo {
+            background-color: var(--cor-secundaria-fraca);
+
+            /* para evitar erro de vazar para direita*/
+            width: calc(100% - 20px);
+        }
+        div#agregador-conteudos-curriculo { /*caixa dos blocos de conteúdo para currículo*/
+            background-color: inherit;
+        }
+
+        span.conteudo-curriculo { /* bloco de curriculo */
+            background-color: white;
+            padding: 5px 10px 10px 10px;
+        }
+        span.conteudo-curriculo>h4 { /* título do conteúdo */
+            font-size: 1.2em;
+            font-family: var(--fonte-especial);
+
+            margin-bottom: 5px;
+        }
+        span.conteudo-curriculo>p {
+            font-family: var(--fonte-texto);
+            font-size: 1em;
+
+            margin-bottom: 3px;
+        }
+
+        div#caixa-extra-curriculo { /* caixa do botão de baixar */
+            /* border: 10px solid red; */
+            border-top: 1px solid var(--cor-secundaria);
+
+            background-color: inherit;
+            margin-top: 20px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <span class="nome-titulo">
+            <h1 class="nome-titulo">
+                <a href="index.html">elisson silva santos</a>
+            </h1>
+        </span>
+        <span class="navegar-cabecalho">
+            <nav class="navegar-cabecalho">
+                <span class="botao-secao">
+                    <a href="index.html">inicial</a>
+                </span>
+                <!-- <span class="botao-secao">
+                    <a href="">casos</a>
+                </span> -->
+                <span class="botao-secao">
+                    <a href="sobre.html">sobre</a>
+                </span>
+                <!-- <span class="botao-secao">
+                    <a href="">contato</a>
+                </span> -->
+            </nav>
+        </span>
+    </header>
+    <main>
+        <h2 id="titulo-pagina">Sobre</h2>
+        <section>
+            <div id="parte-apresentacao">
+                <span id="caixa-foto">
+                    <img id="imagem-sobre" src="foto-sobre.jpeg" alt="">
+                </span>
+                
+                <span id="caixa-info">
+                    <p id="parag-especial-introducao">Quem sou eu</p>
+                    
+                    <p id="parag-introducao">Olá, eu sou Elisson. Sou desenvolvedor de software e estudante de TI. 
+                        Meu foco está em resolver problemas de forma criativa e pragmática. 
+                        Sempre tentando melhor integrar os conhecimentos e experiências, 
+                        desde a interação com os usuários à implementação dos serviços, 
+                        busco entregar projetos feitos de forma comprometida. Atualmente, 
+                        estou à procura de uma oportunidade de estágio na área de desenvolvimento. </p>
+                </span>
+            </div>
+
+            <div id="parte-curriculo">
+                <div id="agregador-conteudos-curriculo">
+                    <span class="conteudo-curriculo">
+                        <h4>Formação</h4>
+                        
+                        <p>Ciência da Computação</p>
+                        <p>[UNIFACS]</p>
+                        <p>jan/2020 - dez/2023</p>
+                        
+                    </span>
+                    <span class="conteudo-curriculo">
+                        <h4>Experiência</h4>
+                        
+                        <p>Estagiário em Suporte Técnico</p>
+                        <p>[Procuradoria Geral do Estado]</p>
+                        <p>jan/2023 - ago/2023</p>
+                    </span>
+                    <span class="conteudo-curriculo">
+                        <h4>Habilidades</h4>
+                        
+                        <p>Desenvolvimento web com HTML, CSS e JS</p>
+                        <p>Java, C++, Python</p>
+                        <p>MySQL</p>
+                    </span>
+                    
+                </div>
+
+                <div id="caixa-extra-curriculo">
+                    <span id="botao-baixar-curriculo">baixar (em breve)</span>
+                </div>
+            </div>
+
+            
+        </section>
+    </main>
+    <footer>
+        <p id="parag-contatos">contato</p>
+        <nav>
+            <span>
+                <a class="contato-rodape" href="https://www.linkedin.com/in/elissonsilvasantos/">Linkedin</a>
+            </span>
+            <span>
+                <a class="contato-rodape" href="https://github.com/elissonsilvasantos">Github</a>
+            </span>
+        </nav>
+    </footer>
+</body>
+</html>
